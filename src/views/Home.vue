@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>一个基于Element-ui的简单消息模板的配置：</p>
+    <p>一个简单消息模板的配置：</p>
     <message-template-creator v-model="value" :tag-list="tagList" />
   </div>
 </template>
