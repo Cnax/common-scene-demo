@@ -27,7 +27,12 @@ export default {
   data() {
     return {
       searchForm: [
-        { name: "发起人", key: "name" },
+        {
+          name: "发起人",
+          key: "name",
+          props: { clearable: true },
+          listeners: { change: this.handleInputChange }
+        },
         { name: "开庭日期", key: "startDate", type: "date" },
         {
           name: "维修师傅",
@@ -61,8 +66,12 @@ export default {
   created() {},
   mounted() {},
   methods: {
+    handleInputChange(data) {
+      console.log("data :>>", data);
+    },
     handleSearch(data) {
       this.searchParams = data;
+      console.log("this.searchParams >>", this.searchParams);
     }
   }
 };

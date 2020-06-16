@@ -9,6 +9,8 @@
         v-model="formParams[item.key]"
         v-if="!item.type || item.type === 'input'"
         :placeholder="item.placeholder || '请输入'"
+        v-bind="item.props"
+        v-on="item.listeners"
       />
       <el-select
         clearable
